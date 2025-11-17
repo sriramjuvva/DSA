@@ -1,0 +1,41 @@
+Where Linked Lists are used in real life:
+
+1.Music/Video Playlists
+– Next/previous songs are linked like nodes.
+
+2.Undo/Redo (CTRL+Z / CTRL+Y)
+– Each action is a node linked to previous/next action.
+
+3.Browser Forward/Back History
+– Each visited page is a node linked in sequence.
+
+4.Scheduling (OS Task Management)
+– Processes in OS are kept in linked structures.
+
+5.Memory Management / Allocators
+– Free blocks of memory stored as linked lists.
+
+6.Navigation in apps (Breadcrumbs)
+– Steps/screens linked in order.
+
+7.Implementing Queues/Stacks
+– Many internal libraries use linked lists.
+
+8.File systems (FAT)
+– File blocks are stored as linked nodes.
+
+
+
+👉 WHY LINKED LISTS ARE USED RATHER THAT ARRAYS:
+In a list (array):
+Elements are stored continuously in memory.
+So if you remove or insert something in the middle or at the start, all the elements after it must shift one position.
+This shifting takes time (O(n)).
+
+In a linked list:
+Each element stores only two things: data + address of next.
+To insert or delete, you just change a couple of pointers.
+No shifting.
+This takes constant time (O(1)).
+
+That’s why modifying is faster in linked list.

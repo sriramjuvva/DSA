@@ -1,0 +1,10 @@
+⭐ Basic Linked List Operations
+
+1️⃣ Insert at head
+2️⃣ Insert at tail
+3️⃣ Insert at any position
+4️⃣ Delete a node
+5️⃣ Search a value
+6️⃣ Print the linked list
+7️⃣ Count nodes
+
