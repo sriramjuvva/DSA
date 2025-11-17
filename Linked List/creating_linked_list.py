@@ -28,6 +28,22 @@ def inserting_at_end(head,value):
     return head
 head  = inserting_at_end(head,10)
 
+def inserting_at_position(head,positon,value):
+    if positon == 1:
+        new_node = ListNode(value)
+        new_node.next = head
+        return new_node
+    curr = head
+    count = 1
+    while count < positon-1 and curr:
+        curr = curr.next 
+        count += 1
+    new_node = ListNode(value)
+    new_node.next = curr.next
+    curr.next =new_node
+    return head
+head  = inserting_at_position(head,4,10)
+
 
 
 def print_ll(head):
