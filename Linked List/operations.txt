@@ -3,8 +3,18 @@
 1️⃣ Insert at head
 2️⃣ Insert at tail
 3️⃣ Insert at any position
-4️⃣ Delete a node
-5️⃣ Search a value
-6️⃣ Print the linked list
-7️⃣ Count nodes
+4️⃣ Delete head
+5️⃣ Delete tail
+6️⃣ Delete at a position
+7️⃣ Printing LL (Travsersal)
+
+
+⭐ Basic Linked List Questions
+1️⃣ Searching in Linked List
+2️⃣ Length of Linked List
+3️⃣ Reversing the Linked List
+4️⃣ Finding Middle Node
+5️⃣ Detect Loop / Cycle in Linked List
+6️⃣ Remove Loop
+
 
