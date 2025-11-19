@@ -54,51 +54,103 @@ def print_ll(head):
 print(print_ll(head))
 
 
-# deleting the head
-def deleting_the_head(head):
+# # deleting the head
+# def deleting_the_head(head):
+#     if head is None:
+#         return None
+#     return head.next
+# head = deleting_the_head(head)
+
+# #deleting the last_node
+# def deleting_at_the_end(head):
+#     if head is None or head.next is None:
+#         return head
+#     curr = head
+#     while curr.next.next:
+#         curr = curr.next
+#     curr.next =None
+#     return head
+# head = deleting_at_the_end(head)
+
+
+# #deleting node at specific postion
+# def deleting_node_at_specific_position(head,positon):
+#     if head is None:
+#         return None
+#     if positon == 1:
+#         return head.next
+#     curr = head
+#     count = 1
+#     while count < positon-1 and curr.next:
+#         curr = curr.next
+#         count += 1
+#     if curr.next is None:
+#         return head
+#     curr.next = curr.next.next
+#     return head
+# head = deleting_node_at_specific_position(head,2)
+
+
+
+# #printing the list after deletion in ll
+# def print_del(head):
+#     curr = head
+#     while curr:
+#         print(curr.val,end="-->")
+#         curr= curr.next
+# print(print_del(head))
+
+
+#searching a element in linked list
+def searching_element(head,value):
     if head is None:
         return None
-    return head.next
-head = deleting_the_head(head)
-
-#deleting the last_node
-def deleting_at_the_end(head):
-    if head is None or head.next is None:
-        return head
-    curr = head
-    while curr.next.next:
-        curr = curr.next
-    curr.next =None
-    return head
-head = deleting_at_the_end(head)
-
-
-#deleting node at specific postion
-def deleting_node_at_specific_position(head,positon):
-    if head is None:
-        return None
-    if positon == 1:
-        return head.next
-    curr = head
-    count = 1
-    while count < positon-1 and curr.next:
-        curr = curr.next
-        count += 1
-    if curr.next is None:
-        return head
-    curr.next = curr.next.next
-    return head
-head = deleting_node_at_specific_position(head,2)
-
-
-
-#printing the list after deletion in ll
-def print_del(head):
     curr = head
     while curr:
-        print(curr.val,end="-->")
-        curr= curr.next
-print(print_del(head))
+        if curr.val == value:
+            return True
+        curr = curr.next
+    return False
+print(searching_element(head,67))
+
+# length of the linkedlist
+def length_of_ll(head):
+    if head is None:
+        return 0
+    curr = head 
+    count  = 0 
+    while curr:
+        curr = curr.next
+        count  += 1
+    return count
+print(length_of_ll(head))
+
+# reversing a linked list
+def reversing_a_ll(head):
+    if head is None:
+        return None
+    prev,curr = None,head
+    while curr:
+        temp = curr.next
+        curr.next = prev
+        prev = curr
+        curr = temp
+    return print_ll(prev)
+
+print(reversing_a_ll(head))    
+
+
+# middle element of the ll
+def finding_middle_element(head):
+    if head is None:
+        return None
+    slow = head
+    fast  = head
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+    return slow.val
+print(finding_middle_element(head))
 
 
 
